@@ -1,0 +1,30 @@
+@import './vars.scss';
+@import './mixins.scss';
+@import './reset.scss';
+@import './stickyBlock.scss';
+@import './menu.scss';
+@import './header.scss';
+@import './main.scss';
+@import './features.scss';
+@import './about.scss';
+@import './services.scss';
+@import './additionalBlock.scss';
+@import './prices.scss';
+@import './examples.scss';
+@import './steps.scss';
+@import './faq.scss';
+@import './contact.scss';
+@import './form.scss';
+@import './footer.scss';
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 30px;
+  width: 100%;
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}

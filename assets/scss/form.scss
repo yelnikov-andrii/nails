@@ -1,0 +1,56 @@
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+
+  &__row {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+  }
+
+  &__input {
+    height: 60px;
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+
+    &:placeholder {
+      color: gainsboro;
+    }
+
+  }
+
+  &__textarea {
+    width: 100%;
+    padding: 10px 20px;
+    outline: none;
+    border: none;
+  }
+
+  &__button {
+    width: 170px;
+    height: 60px;
+    background-color: $primaryColor;
+    color: $txtColor;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: flex-start;
+    @include transition;
+
+
+    &:hover {
+      background-color: $txtColor;
+      color: $txtColorLight;
+    }
+  }
+
+}

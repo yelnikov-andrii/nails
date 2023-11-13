@@ -1,0 +1,83 @@
+.services {
+  padding: 120px 0;
+  background-color: aliceblue;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $txtColor;
+    margin: 0 0 20px 0;
+    display: block;
+    width: 100%;
+    text-align: center; 
+  }
+
+  &__h4 {
+    font-size: 42px;
+    font-weight: 800;
+    color: $txtColor;
+    margin: 0 0 50px 0;
+    width: 100%;
+    text-align: center; 
+  }
+
+  &__block {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+  }
+
+  &__item {
+    width: calc((100% - 20px) / 3);
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    background-color: #fff;
+  }
+
+  &__imgWrappers {
+    margin: 0 0 30px 0;
+    align-self: center;
+  }
+
+  &__h6 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 0 40px 0;
+  }
+
+  &__list {
+    list-style: circle;
+    padding: 0 0 0 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 0 0 40px 0;
+  }
+
+  &__listItem {
+    font-size: 16px;
+  }
+
+  &__button {
+    max-width: 155px;
+    height: 60px;
+    background-color: $primaryColor;
+    color: $txtColor;
+    font-size: 18px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    align-self: center;
+    width: 100%;
+    @include transition;
+
+    &:hover {
+      background-color: $txtColor;
+      color: $txtColorLight;
+    }
+  }
+}

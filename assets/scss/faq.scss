@@ -1,0 +1,101 @@
+.faq {
+  padding: 120px 0;
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $txtColor;
+    margin: 0 0 20px 0;
+    display: block;
+    width: 100%;
+    text-align: center; 
+    font-weight: 500;
+  }
+
+  &__h4 {
+    font-size: 42px;
+    font-weight: 800;
+    color: $txtColor;
+    margin: 0 0 50px 0;
+    width: 100%;
+    text-align: center; 
+  }
+
+  &__block {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__dropdown {
+    width: 100%;
+  }
+
+  &__span {
+    display: inline-block;
+    color: $txtColorLight;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '+';
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 18px;
+      font-weight: 600;
+    }
+  }
+
+  &__dropdownButton {
+    width: 100%;
+    background-color: $txtColor;
+    color: $txtColorLight;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    @include transition;
+
+
+    &.active {
+      background-color: $primaryColor;
+      color: $txtColor;
+
+      .faq__span {
+        &::before {
+          content: '-';
+          color: $txtColor;
+          font-size: 22px;
+          font-weight: 600;
+        }
+      }
+    }
+  }
+
+  &__dropdownContent {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background: lightgray;
+  }
+
+  &__list {
+    padding: 20px 10px;
+
+    &--numeric {
+      padding: 20px 30px;
+    }
+  }
+
+  &__listItem {
+    font-size: 18px;
+    font-weight: 400;
+    color: $txtColor;
+    margin: 0 0 10px 0;
+  }
+}
+

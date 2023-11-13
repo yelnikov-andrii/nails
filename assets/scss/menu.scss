@@ -1,0 +1,28 @@
+.menu {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background-color: lightblue;
+  z-index: 2;
+  padding: 60px 20px;
+
+  &__closeButton {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    width: 30px;
+    height: 30px;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  &__link {
+    color: $txtColor;
+    font-weight: 500;
+    font-size: 18px;
+  }
+}

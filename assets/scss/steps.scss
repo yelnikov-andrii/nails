@@ -1,0 +1,111 @@
+.steps {
+  background-image: url('../images/stepsOfWork.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+
+  &__topBlock {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 0 0 50px 0;
+  }
+
+  &__h4 {
+    font-size: 42px;
+    font-weight: 700;
+    margin: 0;
+    color: $txtColorLight;
+  }
+
+  &__button {
+    height: 60px;
+    background-color: $primaryColor;
+    color: $txtColor;
+    font-size: 18px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 230px;
+    @include transition;
+
+    &:hover {
+      background-color: $txtColor;
+      color: $txtColorLight;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__item {
+    width: calc((100% - 80px) / 3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @for $i from 1 through 3 {
+      &:nth-child(#{$i}) .steps__imgWrapper::before {
+        content: "#{$i}";
+      }
+  }
+  }
+
+  &__imgWrapper {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    margin: 0 0 30px 0;
+
+    &::before {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      color: $txtColorLight;
+      width: 50px;
+      height: 50px;
+      background-color: $primaryColor;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 22px;
+      font-weight: 700;
+  }
+  }
+
+  &__img {
+    width: 40px;
+    height: 40px;
+  }
+
+  &__h5 {
+    font-size: 20px;
+    font-weight: 500;
+    color: $txtColorLight;
+    margin: 0 0 30px 0;
+    width: 70%;
+    text-align: center;
+  }
+
+  &__description {
+    font-size: 16px;
+    font-weight: 400;
+    color: $txtColorLight;
+    margin: 0;
+    width: 70%;
+    text-align: center;
+  }
+}

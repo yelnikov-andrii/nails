@@ -1,0 +1,60 @@
+.footer {
+  background-image: url('../images/footer-bg.jpeg');
+  padding: 120px 0 0 0;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $txtColorLight;
+
+  &__block {
+    display: flex;
+    gap: 20px;
+    margin: 0 0 50px 0;
+  }
+
+  &__blockItem {
+    width: calc((100% - 60px) / 4);
+  }
+
+  &__h3 {
+    font-size: 32px;
+    font-weight: 800;
+    margin: 0 0 40px 0;
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    margin: 0 0 40px 0;
+  }
+
+  &__listItem {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  &__link {
+    color: $txtColorLight;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  &__blockBottom {
+    background-color: rgba(gray, 0.5);
+    color: $txtColorLight;
+    padding: 30px 0;
+    text-align: center;
+  }
+}

@@ -1,0 +1,82 @@
+.contact {
+  padding: 120px 80px;
+  background-color: lightgray;
+
+  &__block {
+    display: flex;
+    gap: 40px;
+  }
+
+  &__title {
+    font-size: 16px;
+    text-transform: uppercase;
+    color: $txtColor;
+    margin: 0 0 20px 0;
+    display: block;
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  &__h4 {
+    font-size: 42px;
+    font-weight: 800;
+    color: $txtColor;
+    margin: 0 0 50px 0;
+    width: 100%;
+    align-self: flex-start;
+  }
+
+  &__form {
+    width: calc((100% - 4px) / 2);
+  }
+
+  &__info {
+    width: calc((100% - 4px) / 2);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__infoItem {
+    padding: 20px 30px 40px 20px;
+    background-color: #fff;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+  }
+
+  &__infoTxtBlock {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  &__icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  &__h6 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    color: $txtColor;
+  }
+
+  &__infoTxt {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 400;
+  }
+
+  &__link {
+    color: $txtColor;
+    font-size: 16px;
+    font-weight: 400;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+}
+

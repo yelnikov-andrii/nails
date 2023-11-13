@@ -1,0 +1,72 @@
+.additionalBlock {
+  background-image: url('../images/achievementsBg.jpeg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 120px 0;
+
+  &__block {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  &__span {
+    font-size: 42px;
+    line-height: 60px;
+    font-weight: 700;
+    color: $primaryColor;
+    display: block;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      left: -20px;
+      top: -20px;
+      content: '';
+      width: 80px;
+      height: 150px;
+      background: $primaryColor;
+      opacity: 0.1;
+    }
+  }
+
+  &__text {
+    color: $txtColorLight;
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  &__h5 {
+    font-size: 42px;
+    font-weight: 700;
+    line-height: 53px;
+    margin: 0;
+    color: $txtColorLight;
+  }
+
+  &__button {
+    height: 60px;
+    background-color: $primaryColor;
+    color: $txtColor;
+    font-size: 17px;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    width: 245px;
+    @include transition;
+
+    &:hover {
+      background-color: $txtColorLight;
+      color: $txtColor;
+    }
+  }
+}

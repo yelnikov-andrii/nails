@@ -1,0 +1,104 @@
+.header {
+  position: relative;
+  z-index: 2;
+
+  @media screen and (max-width: 992px) {
+    overflow-x: hidden;
+    
+    &.active {
+      overflow: visible;
+    }
+  }
+
+  &__blockTop {
+    padding: 30px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: $txtColor;
+    background: #fff;
+  }
+
+  &__logo {
+    font-size: 32px;
+    font-weight: 900;
+    border: 1px solid #333;
+    padding: 4px;
+
+    @media screen and (max-width: 1200px) {
+      font-size: 24px;
+    }
+  }
+
+  &__info {
+    display: flex;
+    gap: 60px;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+
+        @media screen and (max-width: 1200px) {
+        gap: 40px;
+    }
+
+    @media screen and (max-width: 992px) {
+      display: none;
+    }
+  }
+  
+  &__menuButton {
+    display: none;
+
+    @media screen and (max-width: 992px) {
+      display: inline-block;
+    }
+  }
+
+  &__infoItem {
+    color: $txtColor;
+    display: flex;
+    gap: 30px;
+    align-items: center;
+  }
+
+  &__infoline {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 400;
+
+    &--bold {
+      font-weight: 700;
+      font-size: 17px;
+      margin: 0 0 5px 0;
+    }
+  }
+
+  &__link {
+    color: $linkColor;
+    font-size: 18px;
+
+    &:hover {
+      color: $primaryColor;
+    }
+  }
+
+  &__menu {
+    right: -100%;
+    position: absolute;
+    top: 0;
+    box-shadow: 0px 0px 10px 0px #eee;
+    width: 100%;
+    z-index: 3;
+    background: #fff;
+    @include transition;
+
+
+      @media screen and (min-width: 992px) {
+        display: none; 
+  }
+
+    &.active {
+      right: 0;
+    }
+  }
+}
