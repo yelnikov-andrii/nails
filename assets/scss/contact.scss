@@ -2,9 +2,17 @@
   padding: 120px 80px;
   background-color: lightgray;
 
+  @media screen and (max-width: 768px) {
+    padding: 120px 20px;
+  }
+
   &__block {
     display: flex;
     gap: 40px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__title {
@@ -28,6 +36,10 @@
 
   &__form {
     width: calc((100% - 4px) / 2);
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__info {
@@ -35,6 +47,10 @@
     display: flex;
     flex-direction: column;
     gap: 20px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__infoItem {

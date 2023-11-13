@@ -10,6 +10,11 @@
     justify-content: space-between;
     align-items: baseline;
     margin: 0 0 50px 0;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__h4 {
@@ -43,6 +48,10 @@
     display: flex;
     gap: 40px;
     align-items: center;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+    }
   }
 
   &__item {
@@ -55,7 +64,11 @@
       &:nth-child(#{$i}) .steps__imgWrapper::before {
         content: "#{$i}";
       }
-  }
+    }
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+    }
   }
 
   &__imgWrapper {

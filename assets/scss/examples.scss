@@ -25,6 +25,11 @@
     gap: 20px;
     width: 100%;
     flex-wrap: wrap;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
   }
 
   &__item {
@@ -32,6 +37,11 @@
     padding: 10px 20px;
     background-color: #fff;
     max-height: 300px;
+
+    @media screen and (max-width: 768px) {
+      width: 100%;
+      max-height: unset;
+    }
   }
 
   &__imgWrappers {
@@ -40,9 +50,13 @@
     overflow: hidden;
 
     &:hover {
-      .examples__img {
-        transform: scale(1.1);
+
+      @media screen and (min-width: 768px) {
+        .examples__img {
+          transform: scale(1.1);
+        }
       }
+
     }
   }
 

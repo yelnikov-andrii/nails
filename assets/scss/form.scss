@@ -9,6 +9,11 @@
     display: flex;
     justify-content: space-between;
     gap: 10px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      gap: 20px;
+    }
   }
 
   &__input {
